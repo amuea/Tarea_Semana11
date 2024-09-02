@@ -1,14 +1,11 @@
 public static class Diccionario{
 
-    // Este ejemplo NO resuelve palabras con doble significado
-    // book => libro, reservación
-    // bug => gusano, error de programación
     public static void Run(){
         Dictionary<string, string> idioma = new Dictionary<string, string>();
 
         //Agregar palabras al diccionario
         idioma.Add("Hola", "Hello");
-        idioma.Add("Adios", "bye");
+        idioma.Add("Adios", "Bye");
         // idioma.Add("book", "libro");
         // idioma.Add("book", "reservación");
 
@@ -25,8 +22,7 @@ public static class Diccionario{
         string? valor = Console.ReadLine();
         
         //ContainsKey comprueba si una clave ya existe
-        if(idioma.ContainsKey(clave))
-        {
+        if(idioma.ContainsKey(clave)){
             System.Console.WriteLine("La palabra ya existe");
         }else{
             idioma.Add(clave, valor);
@@ -37,7 +33,7 @@ public static class Diccionario{
         System.Console.WriteLine("Ingrese un texto a traducir");
         string? texto = Console.ReadLine();
 
-        string[] palabras = texto.Split(" "); //convertimos el texto en un vector
+        string[] palabras = texto.Split(" ");
         string textoTraducido = string.Empty;
         string textoBuscado = string.Empty;
 
@@ -47,8 +43,7 @@ public static class Diccionario{
         //     System.Console.WriteLine(item);
         // }
 
-        foreach (var item in palabras)
-        {
+        foreach (var item in palabras){
             textoBuscado = item;
 
             if(idioma.ContainsKey(item)){
