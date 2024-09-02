@@ -4,33 +4,40 @@ public static class Diccionario{
         Dictionary<string, string> idioma = new Dictionary<string, string>();
 
         //Agregar palabras al diccionario
-        idioma.Add("Hola", "Hello");
-        idioma.Add("Adios", "Bye");
-        // idioma.Add("book", "libro");
-        // idioma.Add("book", "reservación");
+        idioma.Add("Tiempo", "Time");
+        idioma.Add("Persona", "Person");
+        idioma.Add("Año", "Year");
+        idioma.Add("Día", "Day");
+        idioma.Add("Mundo", "World");
+        // idioma.Add("life", "vida");
+        // idioma.Add("woman", "mujer");
+        // idioma.Add("work", "trabajo");
+        // idioma.Add("week", "semana");
+        // idioma.Add("place", "lugar");
 
-        //Agregar palabras al diccionario desde una variable
-        //string clave = "bienvenido";
-        //string valor = "welcome";
-
-        System.Console.WriteLine("Ingrese una nueva clave y valor al diccionario");
         
-        //Agregar datos al diccionario desde teclado
+        //Agregar frase al diccionario
+        //string clave = "Este día es hermoso, depende mucho del ojo que lo ve";
+        //string valor = "Este day es hermoso, depende mucho del eye que lo ve";
+
+        System.Console.WriteLine("Ingrese una clave y un valor al diccionario");
+
+        //Agregar datos al diccionario
         System.Console.WriteLine("Ingrese una clave");
         string? clave = Console.ReadLine();
-        System.Console.WriteLine("Ingrese el valor asociado");
+        System.Console.WriteLine("Ingrese un valor");
         string? valor = Console.ReadLine();
         
-        //ContainsKey comprueba si una clave ya existe
+        //ContainsKey comprobar si una frase ya existe
         if(idioma.ContainsKey(clave)){
-            System.Console.WriteLine("La palabra ya existe");
+            System.Console.WriteLine("La frase ya existe");
         }else{
             idioma.Add(clave, valor);
         }
 
         
         //Traductor
-        System.Console.WriteLine("Ingrese un texto a traducir");
+        System.Console.WriteLine("Ingrese una frase a traducir");
         string? texto = Console.ReadLine();
 
         string[] palabras = texto.Split(" ");
